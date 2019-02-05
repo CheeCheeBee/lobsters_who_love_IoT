@@ -58,7 +58,7 @@ int buttonState = digitalRead( buttonPin );
 
 void loop(){
 
-	// set up color variables	
+	// declare color variables	
 	// check time (is the timer a count down or timer up?)
 
 
