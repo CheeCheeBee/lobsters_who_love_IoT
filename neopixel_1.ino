@@ -51,3 +51,69 @@ int buttonState = digitalRead( buttonPin );
 
 }
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// VISUALLY, CONCEPTUALLY WHAT I WANT TO HAVE HAPPEN, doesn't work >> WILL PUT IN TIME (MILLIS) SOON
+
+void loop(){
+
+	// set up color variables	
+	// check time (is the timer a count down or timer up?)
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// TURN ON ALL COLOR STRIP FOR 2 MINUTES
+
+if (currentTime < 120000){  // 120 seconds
+	digital Write (neoPixlel, HIGH);
+
+		for(i=0; i < strip.numPixels(); ++i) 
+    	{
+        	strip.setPixelColor(i, c );
+		strip.show();
+		delay( 0 );
+	}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// AFTER 1 MINUTE, TURN HALF OF THE PIXELS TO RED
+
+} else if (currentTime < 60000 && currentTime > 15000){ 	// 60s-15 seconds	
+		for(i=0; i < 29 && > 14; --i) // increment up
+	{
+		strip.setPixelColor( i, a ); 
+		strip.show();
+		delay( 0 );
+	}
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+// AFTER
+
+} else if (currentTime < 15000){ 		// 30-15 seconds
+	digitalWrite( neoPixel, HIGH);  // turn the LED On
+		
+		for(i=0; i < strip.numPixels(); ++i) // incrememnt up
+	{
+	strip.setPixelColor(i, a ); // pixel number, brightness
+		 strip.show();
+		delay( 0 );
+	}
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+}else if (currentTime <=1500 && current = 0){
+	digitalWrite( neoPixel, HIGH);  // turn the LED On
+		    strip.show();
+		    delay( 5000 );
+	digitalWrite( neoPixel, LOW);  // turn the LED off
+		    strip.show();
+		    delay( 5000 );
